@@ -6,40 +6,38 @@ interface navLink{
 export default function Navabar() {
     const navLink:Array<navLink> = [
         {   
-            link: '',
+            link: '/',
             name: 'Home'
         },
         {   
-            link: '',
+            link: '/concert',
             name: 'Concert'
         },
         {   
-            link: '',
+            link: '/movie',
             name: 'Movies'
         },
         {   
-            link: '',
+            link: '/theater',
             name: 'Theater'
         },
     ]   
   return (
     <>
-      <div className='navbar py-5 px-20 bg-[background: linear-gradient(0deg, #1C1C24, #1C1C24),
-linear-gradient(0deg, #252D3C, #252D3C);
-] text-white'>
+      <div className='navbar py-5 px-20 text-white'>
         <div className='navbar-start'>
-          <a className='btn btn-ghost text-xl'>daisyUI</a>
+          <a className='btn btn-ghost text-xl' href="/">TicTicketing</a>
           <ul className='menu menu-horizontal px-1'>
             {navLink.map((item) =>(
                 <li>
-                    <a className="p-5">{item.name}</a>
+                    <a className="p-5" href={item.link}>{item.name}</a>
                 </li>
             ))}
           </ul>
         </div>
         <div className='navbar-end'>
           <button disabled className='btn mx-3 disabled:text-white'>Login</button>
-          <button disabled  className='btn disabled:bg-pink-500 disabled:text-white'>Register</button>
+          <button disabled  className='btn disabled:bg-rose-500 disabled:text-white'>Register</button>
         </div>
       </div>
     </>

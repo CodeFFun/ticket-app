@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav>
+        <nav className=' bg-[#252D3C]'>
           <Navbar />
         </nav> 
         <main className='h-screen bg-black'>
