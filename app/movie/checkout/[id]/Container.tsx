@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
 import Details from "./Details"
-import Pdf from "./Pdf"
+import Pdf from "./ShowPdf"
 
 
 

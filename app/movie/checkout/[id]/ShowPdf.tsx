@@ -6,7 +6,7 @@ import Card from "@/components/card/Card"
 import html2canvas from "html2canvas"
 import jsPDF from "jspdf"
 
-export default function Pdf (props:any) {
+export default function showPdf (props:any) {
     const number = props.ticket
     const pdfRef = useRef()
     const calculate = {
