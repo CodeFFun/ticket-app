@@ -28,8 +28,8 @@ export default function Navabar() {
         <div className='navbar-start'>
           <a className='btn btn-ghost text-xl' href="/">TicTicketing</a>
           <ul className='menu menu-horizontal px-1'>
-            {navLink.map((item) =>(
-                <li>
+            {navLink.map((item, i) =>(
+                <li key={i}>
                     <a className="p-5" href={item.link}>{item.name}</a>
                 </li>
             ))}
