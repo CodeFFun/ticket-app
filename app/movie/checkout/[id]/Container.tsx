@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
 import Details from "./Details"
-import Pdf from "./ShowPdf"
+// import Pdf from "./ShowPdf"
 
 
 
@@ -177,7 +177,8 @@ export default function Container() {
             <Details id={id} invoice={invoice} setInvoice={setInvoice}/>
         </div>
         ): (
-            <Pdf name={formData.name} address={formData.address} city={formData.city} ticket={ticket} id={params.id}/>
+            // <Pdf name={formData.name} address={formData.address} city={formData.city} ticket={ticket} id={params.id}/>
+            <h1>Something went wrong</h1>
         ))
     }
 }
