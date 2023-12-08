@@ -3,9 +3,12 @@
 import { useState } from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoLocationSharp } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
-export default function Details() {
+export default function Details(props:any) {
   const [ticket, setTicket] = useState(1)
+  const ticketPrice  = ticket * 500
+  const router = useRouter()
 
   const increase = () => {
     setTicket(ticket + 1)
@@ -16,7 +19,8 @@ export default function Details() {
   }
 
   const onClick = () =>{
-
+    localStorage.setItem('ticket', JSON.stringify(ticket))
+    router.push(`checkout/${props.id}`)
   }
   return (
     <>
@@ -51,12 +55,12 @@ export default function Details() {
                 <p>500Rs</p>
                 </div>
                 <div>
-                  <button onClick={decrease} className="m-2 p-2 btn btn-secondary" > - </button>
+                  <button disabled={ticket<= 1 }  onClick={decrease} className="m-2 p-2 btn btn-secondary" > - </button>
                   {ticket}
-                  <button onClick={increase} className="p-2 m-2 btn btn-secondary"> + </button>
+                  <button disabled={ticket >= 10} onClick={increase} className="p-2 m-2 btn btn-secondary"> + </button>
                 </div>
               </div>
-              <button onClick={onClick} className="btn btn-secondary w-full">Checkout: <span>{500 * ticket}</span></button>
+              <button  onClick={onClick} className="btn btn-secondary w-full">Checkout: <span>{ticketPrice}</span></button>
             </div>
         </div>
     </>

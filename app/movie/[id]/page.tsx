@@ -10,7 +10,7 @@ export default  function page() {
   return (
     <div className="flex justify-between">
         <Params id={id} />
-        <Details />
+        <Details id={id} />
     </div>
   )
 }
