@@ -26,7 +26,7 @@ export default function Navabar() {
     <>
       <div className='navbar py-5 px-20 text-white'>
         <div className='navbar-start'>
-          <a className='btn btn-ghost text-xl' href="/">TicTicketing</a>
+          <a className='btn btn-ghost text-xl' href="/">BookTicket</a>
           <ul className='menu menu-horizontal px-1'>
             {navLink.map((item, i) =>(
                 <li key={i}>

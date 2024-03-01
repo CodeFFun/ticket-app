@@ -2,7 +2,7 @@ import Link from 'next/link'
 import getMultipleMovieData from './_lib/getMultipleMovieData'
 import Card from '@/components/card/Card'
 
-export default async function () {
+export default async function Page () {
   const { movieData } = await getMultipleMovieData()
 
   return (

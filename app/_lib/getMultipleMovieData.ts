@@ -9,7 +9,7 @@ interface multiplemovieData{
     }]
 }
 
-export default async function(){
+export default async function movie(){
     const res = await api.get<multiplemovieData>('')
     const data = await res.data
     return({

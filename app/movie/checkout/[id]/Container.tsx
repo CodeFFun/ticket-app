@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
 import Details from "./Details"
-// import Pdf from "./ShowPdf"
+import Download from "./Download"
+ 
 
 
 
@@ -178,7 +179,8 @@ export default function Container() {
         </div>
         ): (
             // <Pdf name={formData.name} address={formData.address} city={formData.city} ticket={ticket} id={params.id}/>
-            <h1>Something went wrong</h1>
+            <Download name={formData.name} ticket={ticket} id={params.id}/>
+            
         ))
     }
 }
